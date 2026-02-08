@@ -101,8 +101,9 @@ https://github.com/Vimuktha-coder/Script-Evaluation-through-AI
 Final Year Major Project  
 AI-Based Script Evaluation System
 
-<img width="736" height="518" alt="image" src="https://github.com/user-attachments/assets/e673cbaa-6f6d-4516-88ef-217d4c335ddf" />
+<img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/e673cbaa-6f6d-4516-88ef-217d4c335ddf" />
 
-<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/193b27e2-bdfd-40ed-b4af-2b6be9762979" />
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/193b27e2-bdfd-40ed-b4af-2b6be9762979" />
 
 
