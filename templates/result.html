@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Results</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, Arial;
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .summary-cards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+            padding: 20px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .card h2 { margin: 0; font-size: 22px; opacity: 0.9; }
+        .card p  { margin-top: 10px; font-size: 30px; font-weight: 700; }
+
+        table {
+            width: 100%;
+            margin-top: 40px;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th, td { padding: 15px; text-align: left; }
+        th { background: rgba(0,0,0,0.3); }
+        tr:nth-child(even) { background: rgba(255,255,255,0.05); }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Evaluation Results</h1>
+
+        <div class="summary-cards">
+            <div class="card">
+                <h2>Teacher Score</h2>
+                <p>{{ teacher_score }}</p>
+            </div>
+
+            <div class="card">
+                <h2>AI Score (out of 50)</h2>
+                <p>{{ ai_score }}</p>
+            </div>
+
+            <div class="card">
+                <h2>Error Rate (%)</h2>
+                <p>{{ avg_error_percent }}%</p>
+            </div>
+
+            <div class="card">
+                <h2>Prediction</h2>
+                <p>{{ prediction }}</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top:40px;">Question-wise Evaluation</h2>
+
+        <table>
+            <tr>
+                <th>Question No.</th>
+                <th>Error Rate</th>
+                <th>Feedback</th>
+            </tr>
+
+            {% for r in results %}
+            <tr>
+                <td>{{ r.question_no }}</td>
+                <td>{{ r.error_rate }}%</td>
+                <td>{{ r.feedback }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <div class="footer">
+            AI Script Evaluator © 2025
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
